@@ -1,12 +1,12 @@
-#import <stdio.h>
+#include <stdio.h>
+
 /* note that C comments are enclosed
    within a slash and a star, and may
    wrap over lines */
 // if you use gcc, two slashes will
 // work too (and may be preferred) #include <stdio.h>
 /* main returns an integer */
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     /* printf is our output function;
        by default, writes to standard out */

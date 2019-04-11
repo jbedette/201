@@ -1,0 +1,156 @@
+Script started on Tue Apr  9 12:11:47 2019
+]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;32m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hggrep  g  ll | gre     ggrep usr/sh        g  uus
+[J[0mUSER       [JUSERNAME   [Jusbkdp     [Jusernoted  [Jusers    [J[A[0m[27m[24m[28Cus[Kr u  ggre p /us
+[J[J[1;31mUsers[0m/  [J[1;31musr[0m/  [J[A[0m[27m[24m[28Cgrep /us[Kr/share[1m/[0m[0m/
+[J[1;31mCSI[0m/                          [1;31mlocale[0m/                     
+[1;31mCoreDuetDaemonConfig.bundle[0m/  [1;31mman[0m/                        
+[1;31mcalendar[0m/                     [1;31mmecabra[0m/                    
+[1;31mcom.apple.languageassetd[0m/     [1;31mmisc[0m/                       
+[1;31mcracklib[0m/                     [1;31mphp[0m/                        
+[1;31mcups[0m/                         [1;31mpmenergy[0m/                   
+[1;31mdict[0m/                         [1;36mri[0m@                         
+[1;31mdoc[0m/                          [1;31msandbox[0m/                    
+[1;31memacs[0m/                        [1;31mscreen[0m/                     
+[1;31mexamples[0m/                     [1;31mskel[0m/                       
+[1;31mfile[0m/                         [1;31msnmp[0m/                       
+[1;31mfirmware[0m/                     [1;31mtabset[0m/                     
+[1;31mgermantok[0m/                    [1;31mterminfo[0m/                   
+[1;31mgroff[0m/                        [1;31mtexinfo[0m/                    
+[1;31mhiutil[0m/                       [1;31mthermald.bundle[0m/            
+[1;31mhttpd[0m/                        [1;31mtokenizer[0m/                  
+[1;31micu[0m/                          [1;31mucupdate[0m/                   
+[1;31minfo[0m/                         [1;31muucp[0m/                       
+[1;31mjava[0m/                         [1;31mvim[0m/                        
+[1;31mkdrl.bundle[0m/                  [1;36mzoneinfo[0m@                   
+[1;31mkpep[0m/                         [1;31mzoneinfo.default[0m/           
+[J[1;31mlangid[0m/                       [J[1;31mzsh[0m/                        [J[22A[0m[27m[24m[28Cgrep /usr/share/[Kdict[1m/[0m[0m [1C[1C[1C[1C[P[16C [17D[P[16C [17Dg[P[16C [17D[P[16C [17Dl /usr/share/dict[16D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C/w
+[J[J[0mweb2    [Jweb2a   [J[1;36mwords[0m@[J[A[0m[27m[24m[28Cl /usr/share/dict/w[Kords[1m [0m[0m l[P[21C [22D[P[21C [22D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C | g [1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1Cgrep     grep [7m(^c|^d).*uou*\w+[27m[16D[27m([27m^[27mc[27m|[27m^[27md[27m)[27m.[27m*[27mu[27mo[27mu[27m*[27m\[27mw[27m+/(^c|^d).*uou*\w+[16D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C/gm[?1l>[?2004l
+[J]2;/usr/share/dict/words grep /(^c|^d).*uou*\w+/gm]1;/usr/share/dict/wordszsh: no matches found: /(^c|^d).*uou*w+/gm
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;31m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hmman gre
+[J[0mgreadlink  [Jgrealpath  [Jgrep     [J[A[0m[27m[24m[28Cman gre[Kp[?1l>[?2004l
+[J]2;man grep]1;man[?1049h[?1h=[m
+GREP(1)                   BSD General Commands Manual                  GREP(1)[m
+[m
+[1mNAME[0m[m
+     [1mgrep[0m, [1megrep[0m, [1mfgrep[0m, [1mzgrep[0m, [1mzegrep[0m, [1mzfgrep[0m -- file pattern searcher[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mgrep[0m [[1m-abcdDEFGHhIiJLlmnOopqRSsUVvwxZ[0m] [[1m-A[0m [4mnum[24m] [[1m-B[0m [4mnum[24m] [[1m-C[0m[[4mnum[24m]][m
+          [[1m-e[0m [4mpattern[24m] [[1m-f[0m [4mfile[24m] [[1m--binary-files[0m=[4mvalue[24m] [[1m--color[0m[=[4mwhen[24m]][m
+          [[1m--colour[0m[=[4mwhen[24m]] [[1m--context[0m[=[4mnum[24m]] [[1m--label[0m] [[1m--line-buffered[0m][m
+          [[1m--null[0m] [[4mpattern[24m] [[4mfile[24m [4m...[24m][m
+[m
+[1mDESCRIPTION[0m[m
+     The [1mgrep[0m utility searches any given input files, selecting lines that[m
+     match one or more patterns.  By default, a pattern matches an input line[m
+     if the regular expression (RE) in the pattern matches the input line[m
+     without its trailing newline.  An empty expression matches every line.[m
+     Each input line that matches at least one of the patterns is written to[m
+     the standard output.[m
+[m
+     [1mgrep[0m is used for simple patterns and basic regular expressions (BREs);[m
+     [1megrep[0m can handle extended regular expressions (EREs).  See re_format(7)[m
+     for more information on regular expressions.  [1mfgrep[0m is quicker than both[m
+     [1mgrep[0m and [1megrep[0m, but can only handle fixed patterns (i.e. it does not[m
+     interpret regular expressions).  Patterns may consist of one or more[m
+     lines, allowing any of the pattern lines to match a portion of the input.[m
+[m
+     [1mzgrep[0m, [1mzegrep[0m, and [1mzfgrep[0m act like [1mgrep[0m, [1megrep[0m, and [1mfgrep[0m, respectively,[m
+     but accept input files compressed with the compress(1) or gzip(1) com-[m
+     pression utilities.[m
+[m
+     The following options are available:[m
+[m
+     [1m-A[0m [4mnum[24m, [1m--after-context[0m=[4mnum[24m[m
+             Print [4mnum[24m lines of trailing context after each match.  See also[m
+             the [1m-B[0m and [1m-C[0m options.[m
+[m
+     [1m-a[0m, [1m--text[0m[m
+             Treat all files as ASCII text.  Normally [1mgrep[0m will simply print[m
+             ``Binary file ... matches'' if files contain binary characters.[m
+             Use of this option forces [1mgrep[0m to output lines matching the spec-[m
+             ified pattern.[m
+[m
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K     [1m-B[0m [4mnum[24m, [1m--before-context[0m=[4mnum[24m[m
+:[K[K [KESCESC[KOO[KBB[K             Print [4mnum[24m lines of leading context before each match.  See also[m
+:[K[K [KESCESC[KOO[KBB[K             the [1m-A[0m and [1m-C[0m options.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-b[0m, [1m--byte-offset[0m[m
+:[K[K [KESCESC[KOO[KBB[K             The offset in bytes of a matched pattern is displayed in front of[m
+:[K[K [KESCESC[KOO[KBB[K             the respective matched line.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-C[0m[[4mnum[24m, [1m--context[0m=[4mnum[24m][m
+:[K[K [KESCESC[KOO[KBB[K             Print [4mnum[24m lines of leading and trailing context surrounding each[m
+:[K[K [KESCESC[KOO[KBB[K             match.  The default is 2 and is equivalent to [1m-A[0m [4m2[24m [1m-B[0m [4m2[24m.  Note:[m
+:[K[K [KESCESC[KOO[KBB[K             no whitespace may be given between the option and its argument.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-c[0m, [1m--count[0m[m
+:[K[K [KESCESC[KOO[KBB[K             Only a count of selected lines is written to standard output.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m--colour[0m=[[4mwhen[24m, [1m--color[0m=[[4mwhen[24m]][m
+:[K[K [KESCESC[KOO[KBB[K             Mark up the matching text with the expression stored in[m
+:[K[K [KESCESC[KOO[KBB[K             GREP_COLOR environment variable.  The possible values of when can[m
+:[K[K [KESCESC[KOO[KBB[K             be `never', `always' or `auto'.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-D[0m [4maction[24m, [1m--devices[0m=[4maction[24m[m
+:[K[K [KESCESC[KOO[KBB[K             Specify the demanded action for devices, FIFOs and sockets.  The[m
+:[K[K [KESCESC[KOO[KBB[K             default action is `read', which means, that they are read as if[m
+:[K[K [KESCESC[KOO[KBB[K             they were normal files.  If the action is set to `skip', devices[m
+:[K[K [KESCESC[KOO[KBB[K             will be silently skipped.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-d[0m [4maction[24m, [1m--directories[0m=[4maction[24m[m
+:[K[K [KESCESC[KOO[KBB[K             Specify the demanded action for directories.  It is `read' by[m
+:[K[K [KESCESC[KOO[KBB[K             default, which means that the directories are read in the same[m
+:[K[K [KESCESC[KOO[KBB[K             manner as normal files.  Other possible values are `skip' to[m
+:[K[K [KESCESC[KOO[KBB[K             silently ignore the directories, and `recurse' to read them[m
+:[K[K [KESCESC[KOO[KBB[K             recursively, which has the same effect as the [1m-R[0m and [1m-r[0m option.[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-E[0m, [1m--extended-regexp[0m[m
+:[K[K [KESCESC[KOO[KBB[K             Interpret [4mpattern[24m as an extended regular expression (i.e. force[m
+:[K[K [KESCESC[KOO[KBB[K             [1mgrep[0m to behave as [1megrep[0m).[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m-e[0m [4mpattern[24m, [1m--regexp[0m=[4mpattern[24m[m
+:[K[K [KESCESC[KOO[KBB[K             Specify a pattern used during the search of the input: an input[m
+:[K[K [KESCESC[KOO[KBB[K             line is selected if it matches any of the specified patterns.[m
+:[K[K [KESCESC[KOO[KBB[K             This option is most useful when multiple [1m-e[0m options are used to[m
+:[K[K [KESCESC[KOO[KBB[K             specify multiple patterns, or when a pattern begins with a dash[m
+:[K[K [KESCESC[KOO[KBB[K             (`-').[m
+:[K[K [KESCESC[KOO[KBB[K[m
+:[K[K [KESCESC[KOO[KBB[K     [1m--exclude[0m[m
+:[K[K [KESCESC[KOO[KBB[K             If specified, it excludes files matching the given filename pat-[m
+:[K[K [KESCESC[KOO[KBB[K             tern from the search.  Note that [1m--exclude[0m patterns take priority[m
+:[K[K[?1l>[?1049l[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;32m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;32m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hman grep[8D/usr/share/dict/words grep /(^c|^d).*uou*\w+/gm[1C /(^c|^d).*uou*\w+/gm[21D- /(^c|^d).*uou*\w+/gm[21De /(^c|^d).*uou*\w+/gm[21D[?1l>[?2004l
+]2;/usr/share/dict/words grep -e /(^c|^d).*uou*\w+/gm]1;/usr/share/dict/wordszsh: no matches found: /(^c|^d).*uou*w+/gm
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;31m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h/usr/share/dict/words grep -e /(^c|^d).*uou*\w+/gm-e /(^c|^d).*uou*\w+/gm [K[A[57Cre /(^c|^d).*uou*\w+/gm[A[57C[1Ce /(^c|^d).*uou*\w+/gm[A[57C[1C[P[19Cgm [A[57Cg /(^c|^d).*uou*\w+/gm[A[58Ce /(^c|^d).*uou*\w+/gm[A[58Cx /(^c|^d).*uou*\w+/gm[A[58Cp /(^c|^d).*uou*\w+/gm[A[58C[?1l>[?2004l[1B
+]2;/usr/share/dict/words grep --regexp /(^c|^d).*uou*\w+/gm]1;/usr/share/dict/wordszsh: no matches found: /(^c|^d).*uou*w+/gm
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;31m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h/usr/share/dict/words grep --regexp /(^c|^d).*uou*\w+/gm[K[A[78C[P[30Cw+/gm [A[43C[P[31C+/gm [A[43C[P[32C/gm [A[43C[P[33Cgm [A[43C[P[34Cm [K[A[43C[P[35C[K[1B[K[A[43C[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D[P[35C [36D/[P[35C [36D[P[35C [36D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C [7m/usr/share/dict[7m/[7mwords[27m[K[A[58C[27m/[27mu[27ms[27mr[27m/[27ms[27mh[27ma[27mr[27me[27m/[27md[27mi[27mc[27mt/[27mw[27mo[27mr[27md[27ms[?1l>[?2004l
+]2;grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} --regexp  ]1;grepzsh: no matches found: /(^c|^d).*uou*w+/gm
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;31m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h grep --regexp /(^c|^d).*uou*\w+/gm /usr/share/dict/words[K[A[78C[P[37C/words [A[35C[P[38Cwords [A[35C[P[39Cords [A[35C[P[40Crds [A[35C[P[41Cds [A[35C[P[42Cs [K[A[35C[P[43C[K[1B[K[A[35Ce /(^c|^d).*uou*\w+/gm /usr/share/dict/words [K[A[36C[1B[K[A[36C[?1l>[?2004l[1B
+]2;grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -e  ]1;grepzsh: no matches found: /(^c|^d).*uou*w+/gm
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;31m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hl[?1l>[?2004l
+]2;ls -G -lah]1;ltotal 3512
+drwxr-xr-x  21 jbedette  staff   672B Apr  8 22:59 [1m[36m.[39;49m[0m
+drwxr-xr-x   8 jbedette  staff   256B Apr  8 23:06 [1m[36m..[39;49m[0m
+-rw-------   1 jbedette  staff    12K Apr  8 22:55 .tan.c.swp
+-rwx------   1 jbedette  staff   761K Apr  5 21:35 [31mLab1.s1.pdf[39;49m[0m
+-rwx------   1 jbedette  staff   761K Apr  5 21:35 [31mLab1.s2and3.pdf[39;49m[0m
+-rwx------   1 jbedette  staff    24B Apr  5 21:35 [31mLab1File1.in[39;49m[0m
+-rwx------   1 jbedette  staff    29B Apr  5 21:35 [31mLab1File2.in[39;49m[0m
+-rwx------   1 jbedette  staff    66B Apr  5 21:35 [31mLab1File3.in[39;49m[0m
+-rwxr-xr-x   1 jbedette  staff   8.3K Apr  8 22:55 [31ma.out[39;49m[0m
+-rwx------   1 jbedette  staff   506B Apr  8 22:54 [31malien.c[39;49m[0m
+-rwx------   1 jbedette  staff    66B Apr  5 21:35 [31mchangeIt[39;49m[0m
+-rw-r--r--   1 jbedette  staff    89K Apr  8 22:49 end
+-rwx------   1 jbedette  staff   200B Apr  5 21:35 [31mfirstTest.sh[39;49m[0m
+-rwx------   1 jbedette  staff   504B Apr  8 22:54 [31mhello.c[39;49m[0m
+-rw-r--r--   1 jbedette  staff   792B Apr  8 22:57 hello.o
+-rw-r--r--   1 jbedette  staff   815B Apr  8 22:55 hello.s
+-rw-r--r--   1 jbedette  staff    17K Apr  9 12:19 p5.txt
+-rwx------   1 jbedette  staff    89B Apr  5 21:35 [31mphonenumbers.txt[39;49m[0m
+-rwx------   1 jbedette  staff    72B Apr  5 21:35 [31mprob3.test1[39;49m[0m
+-rwx------   1 jbedette  staff    57B Apr  5 21:35 [31msed_example.txt[39;49m[0m
+-rwx------   1 jbedette  staff   388B Apr  8 22:55 [31mtan.c[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                               ]2;jbedette@Johns-MacBook-Pro]1;..4-9/Lab1Files]7;file://Johns-MacBook-Pro.local/Users/jbedette/code/psu/spring19/201/hw/4-9/Lab1Files[0m[27m[24m[J[01;32m➜  [36mLab1Files[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccdc  ccdc  eexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on Tue Apr  9 12:20:10 2019

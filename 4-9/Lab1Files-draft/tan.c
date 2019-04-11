@@ -1,17 +1,17 @@
-#import <stdio.h>
-/* note that C comments are enclosed
-   within a slash and a star, and may
-   wrap over lines */
-// if you use gcc, two slashes will
-// work too (and may be preferred) #include <stdio.h>
 /* main returns an integer */
+
+#include <stdio.h>
+#include <math.h>
+
 int
 main(int argc, char *argv[])
 {
     /* printf is our output function;
        by default, writes to standard out */
     /* printf returns an integer, but we ignore that */ 
-    printf("hello, world 2\n");
+    printf("hello, world\n");
+    printf("the tangent of 90 is: %f", tan(90));
+
     /* return 0 to indicate all went well */
     return(0); 
 }
