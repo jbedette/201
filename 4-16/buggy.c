@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 struct Data {
 	int x;
@@ -6,6 +7,6 @@ struct Data {
 int
 main(int argc, char *argv[])
 {
-	struct Data *p = NULL;
-        printf("%d\n", p->x);
+	struct Data p = {5};
+  printf("%d\n", p.x);
 }

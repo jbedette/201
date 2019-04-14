@@ -6,6 +6,8 @@
 #define YESSIGN 47
 
 
+//todo
+//check if format strings are correct for each type
 int
 main ()
 {
@@ -20,7 +22,7 @@ main ()
 	y = 20;
 
 	printf ("i: %d, j: %d, x: %d, y: %d, J: %d, K:  %d\n", i, j, x, y, J, K);
-	printf (" NOSIGN, YESSIGN \n");
+	printf (" %dU,   %d \n", NOSIGN, YESSIGN);
 
 
 	char c = 'a';
