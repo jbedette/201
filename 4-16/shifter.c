@@ -5,12 +5,12 @@
 */
 
 int main(){
-  int i = 64;//i for int!
-  unsigned int u = 64;//u for unsigned
-  printf( "i = %d, u =  %d", i, u );
-  printf( "post shift left of 2: i = %d, u =  %d", i<<2, u<<2 );
-  printf( "reset: i = %d, u =  %d", i=64, u=64 );
-  printf( "post shift right of 1: i = %d, u =  %d", i>>1, u>>1 );
+  int i = -16;//i for int!
+  unsigned int u = -16;//u for unsigned
+  printf( "\n\n(i)nt = %d, (u)nsigned =  %d", i, u );
+  printf( "\npost shift left of 2: i = %d, u =  %d", i<<2, u<<2 );
+  printf( "\n\nreset: i = %d, u =  %d", i=-16, u=-16 );
+  printf( "\npost shift right of 1: i = %d, u =  %d\n\n", i>>1, u>>1 );
   return 0;
 }
 
