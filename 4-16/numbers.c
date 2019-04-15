@@ -22,7 +22,9 @@ main ()
 	y = 20;
 
 	printf ("i: %d, j: %d, x: %d, y: %d, J: %d, K:  %d\n", i, j, x, y, J, K);
-	printf (" %dU,   %d \n", NOSIGN, YESSIGN);
+  //cant figure out how to get the U out
+	//printf (" %d%c,   %d \n", NOSIGN, NOSIGN+1 , YESSIGN);
+	printf (" %d%c,   %d \n", NOSIGN, 'U', YESSIGN);
 
 
 	char c = 'a';
