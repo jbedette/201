@@ -1,0 +1,3 @@
+int : 02 00 00 00
+float : 00 00 00 40
+ptr : 98 fb de f8 fd 7f 00 00
