@@ -21,7 +21,7 @@ main ()
 	x = 512;
 	y = 20;
 
-	printf ("i: %d, j: %d, x: %u, y: %u, J: %d, K:  %d\n", i, j, x, y, J, K);
+	printf ("i: %d, j: %d, x: %u, y: %u, J: %d, K:  %u\n", i, j, x, y, J, K);
   //this is what the tutors told me was correct
 	printf (" %u,   %d \n", NOSIGN, YESSIGN);
 	char c = 'a';
