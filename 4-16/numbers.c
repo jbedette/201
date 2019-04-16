@@ -21,22 +21,18 @@ main ()
 	x = 512;
 	y = 20;
 
-	printf ("i: %d, j: %d, x: %d, y: %d, J: %d, K:  %d\n", i, j, x, y, J, K);
-  //cant figure out how to get the U out
-	//printf (" %d%c,   %d \n", NOSIGN, NOSIGN+1 , YESSIGN);
-	printf (" %d%c,   %d \n", NOSIGN, 'U', YESSIGN);
-
-
+	printf ("i: %d, j: %d, x: %u, y: %u, J: %d, K:  %d\n", i, j, x, y, J, K);
+  //this is what the tutors told me was correct
+	printf (" %u,   %d \n", NOSIGN, YESSIGN);
 	char c = 'a';
-	printf ("c = %d; i = %d \n", c, i);
+	printf ("c = %c; i = %d \n", c, i);
 	i = c;
 	c = i;
-	printf ("c = %d; i = %d \n", c, i);
+	printf ("c = %c; i = %d \n", c, i);
 	c = 'a';
 	i = -255;
-	printf ("c = %d; i = %d \n", c, i);
+	printf ("c = %c; i = %d \n", c, i);
 	c = i;
 	i = c;
-	printf ("c = %d; i = %d \n", c, i);
-
+	printf ("c = %c; i = %d \n", c, i);
 }

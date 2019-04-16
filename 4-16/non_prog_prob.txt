@@ -1,6 +1,3 @@
-50
-int : 02 00 00 00
-float : 00 00 00 40
-ptr : 98 42 dc bb ff 7f 00 00
+:1 int : 50 c3 00 00 float : 00 50 43 47 ptr : 38 5d 15 5e fe 7f 00 00
+:1 int : 50 c3 00 00 float : 00 50 43 47 ptr : 38 0d 1a bb fd 7f 00 00
 
-:wqa
