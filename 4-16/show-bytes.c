@@ -11,17 +11,19 @@ void show_bytes(byte_pointer start, int len)
   printf("\n");
 }
 
+//2.59
 void least_x_rest_y(){
-  unsigned char x = 0x89ABCDEF;
-  unsigned char y = 0x76543210;
+  unsigned int x = 0x89ABCDEF;
+  unsigned int y = 0x76543210;
   int len = sizeof(int);
-  byte_pointer X = &x;
-  byte_pointer Y = &y;
+  int i = len-1;
+  byte_pointer X = (byte_pointer)&x;
+  byte_pointer Y = (byte_pointer)&y;
 
-  printf("\n2.59) least sig x + rest y: %.2x", X+len-1);
-  for(int i = 1; i < len; ++i)  
-    printf(" %.2x", Y);
-  printf("\n");
+  printf("\n2.59) rest y + least sig x:");
+  for(; i >0; --i)  
+    printf(" %.2x", Y[i]);
+  printf(" %.2x\n", *X+(len-4));
 }
 
 //
@@ -90,8 +92,25 @@ void test_show_bytes(int val)
   show_double(dval);
 }
 
-void sig_finder(){
 
+//2.61
+int bit_is(int x){
+  int y = x == 0;
+  return y;
+}
+
+int bit_isnt(int x){
+  return !(x % 15);
+}
+int m_bit_isnt(int x){
+  int shift_val = (sizeof(int)-1)<<3;
+  int xright = x >> shift_val;
+  return !!(xright == 0);
+}
+int l_bit_is(int x){
+  int shift_val = (sizeof(int)-1)<<3;
+  int xleft = x << shift_val;
+  return !!(xleft == 1);
 }
 
 //
@@ -99,7 +118,15 @@ int main(int argc, char *argv[])
 {
   least_x_rest_y();
 
-  /*
+  printf("\n2.61.A) check if x contains a bit == 1,\n");
+  printf("1) x = 4, %d\n2) x = 0, %d\n", (int)bit_is(4), (int)bit_is(0));
+  printf("\n2.61.B) check if x contains a bit == 0,\n");
+  printf("1) x = 4, %d\n2) x = 3, %d\n3) x = 15, %d\n", (int)bit_isnt(4), (int)bit_isnt(3), (int)bit_isnt(15));
+  printf("\n2.61.C) check if least sig bit in x  == 1,\n");
+  printf("1) x = 0, %d\n2) x = 15, %d\n3) x = 16, %d\n", (int)m_bit_isnt(0), (int)m_bit_isnt(15), (int)m_bit_isnt(16));
+  printf("\n2.61.D) check if most sig bit in x  == 0,\n");
+  printf("1) x = 4, %d\n2) x = 0, %d\n3) x = 16, %d\n", (int)l_bit_is(4), (int)l_bit_is(0), (int)l_bit_is(16));
+
   end();
 
   int val = 10;
@@ -117,7 +144,6 @@ int main(int argc, char *argv[])
   val = -16;
   printf("\n4) val:%d\n",val); 
   test_show_bytes(val);
-  */
 
 
   return 0;
