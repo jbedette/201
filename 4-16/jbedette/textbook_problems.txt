@@ -1,4 +1,19 @@
 2.57)
+//
+void show_short(short int x){
+  printf("short:");
+  show_bytes((byte_pointer) &x, sizeof(short int));
+}
+
+//
+void show_long(long int x){
+  printf("long:");
+  show_bytes((byte_pointer) &x, sizeof(long int));
+}
+//
+void show_double(double x){
+  printf("dbl:");
+  show_bytes((byte_pointer) &x, sizeof(double));
 1) val:10
 int: 0a 00 00 00
 float: 00 00 20 41
@@ -33,6 +48,15 @@ dbl: 00 00 00 00 00 00 30 c0
 
 2.58) int: 01 00 00 00
 endianness: little endian
+//
+void end(){
+  int i = 1;
+  printf("\n2.58) ");
+  show_int(i);
+  printf("endianness: ");
+  printf((&i == 0) ? "big endian" : "little endian");
+  printf("\n");
+}
 
 2.59) rest y + least sig x: 76 54 32 ef
 

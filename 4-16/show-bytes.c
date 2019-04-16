@@ -48,20 +48,6 @@ void show_pointer(void *x)
 }
 
 //
-void show_short(short int x){
-  printf("short:");
-  show_bytes((byte_pointer) &x, sizeof(short int));
-}
-
-//
-void show_long(long int x){
-  printf("long:");
-  show_bytes((byte_pointer) &x, sizeof(long int));
-}
-//
-void show_double(double x){
-  printf("dbl:");
-  show_bytes((byte_pointer) &x, sizeof(double));
 }
 
 //
