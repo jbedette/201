@@ -1,22 +1,8 @@
 #include <stdio.h>
-
+  //you might want to modify this for testing it out.
+  //book asked for me to check every possible value, so i did
 typedef unsigned float_bits;
 
-void printBits(size_t const size, void const * const ptr)
-{
-    unsigned char *b = (unsigned char*) ptr;
-    unsigned char byte;
-    int i, j, c = 0;
-    for (i=size-1;i>=0;i--)
-    {
-        for (j=7;j>=0;j--)
-        {
-            byte = (b[i] >> j) & 1;
-            printf("%u", byte);
-        }
-    }
-    puts("");
-}
 
 float_bits float_absval(float_bits f){
   unsigned s = f>>31;
@@ -40,12 +26,11 @@ int main(){
     float comp = (float)f;
     if(out == -1) printf("\ninf");
     else if(out == comp && flag){
-      --flag;
-      printf("\nNaN");
+      printf("\nNaN");//i'd take this part out if you want to see daylight
     }
     else{
       printf("\nout/absolute: %f, unsigned f->float: %f", out, comp);
-      break;
+      //break;//i'd uncomment this break if you want to test things 
     }
   }
   return 0;
