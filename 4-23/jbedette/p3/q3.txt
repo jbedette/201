@@ -1,0 +1,8 @@
+//2.87
+//half precision float value table
+//prompt|num|hex|significand(M)|integer val of exponent(E)|numeric val(V)|approx numeric(D)
+//-0|-0|0x8400|0|1|0|0
+//smallest value>2|2.001
+//512|
+//-inf|
+//num with hex rep 3BB0
