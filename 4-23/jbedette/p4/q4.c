@@ -24,8 +24,6 @@ float_bits float_absval(float_bits f){
   unsigned frac = f & 0x7FFFFF;
   if(exp == 255 && frac != 0){ return f;}//return f if NaN
   else if(exp < 255){
-    unsigned out = (0|(exp<<23)|frac);
-    //printBits(sizeof(out),&out);
     return 0|(exp<<23)|frac;//strip sign-> absolute
   }
   else{
@@ -35,11 +33,7 @@ float_bits float_absval(float_bits f){
 }
 
 int main(){
-  //float_bits f =1;
-  //unsigned MAX =2147483648;//max unsigned
-  //for(; f<MAX; ++f){
-  //printBits(sizeof(MAX), &MAX);
-  float_bits f =2147483648;//max unsigned
+  float_bits f =2147483647;//max unsigned
   int flag = 1;
   for(; f>0; --f){
     float out = float_absval(f);
