@@ -1,0 +1,66 @@
+CS201 Spring 2019 (Karavanic)
+Homework #4 Due: Wednesday May 8 AOE
+Part A: C Programming exercises
+
+1. This problem refers to the code “WhatIf” from lecture May 2. Each question assumes you are
+starting with the original version of the code. You need only submit your answers to the
+questions.
+
+(a) Remove the final “else”, compile and run. Does the output change when you run with
+the correct number of arguments? Does the output change when you run with too many
+arguments?
+
+(b) What is the result of removing the parentheses in line 9?
+
+c) What is the result of removing the { in line 7 and the first } in line 9? What is the
+result of removing the { in line 9 and the } in line 16?
+
+////
+2. This problem refers to the code “SwitchItUp” from lecture May 2. Each questions assumes
+you are starting with the original version of the code.
+
+(a) Remove line 19 (the break). What is the result of running with input “a”? What is the
+result of running with input “I”?
+
+(b) Write a new program, “SwitchItDown” as follows. Write a new function “tolower”
+that takes one argument, a char, and returns a char. Given an input of an uppercase letter,
+it should convert it to lowercase. Given an input of lowercase, it should simply return the
+value unchanged. Submit your source code. [Hint: Remember that the alphabet is
+represented with ASCII]
+
+Part B: Problems from B&O:
+3.58, 3.60*, 3.63, 3.65
+*NOTE: The book has an error for problem 3.60. In function loop, argument n should be
+declared as being of type int. (line 1 should read “long loop (long x, int n)”
+Turning in Homework
+You will turn in your assignment ONLY electronically, following the instructions below. Submission is
+due at the beginning of class on the day the assignment is due.
+• Electronic submission:
+• Email address: Electronic submissions should be sent to karavan at pdx.edu.
+• Subject line: Use the subject line with three words in the following format (without the angle
+brackets): dueA<n>, <Your CS login name>, <Your last name> where <n> is the assignment
+number (1, 2, 3, etc.). For example, Subject: dueA1, wuchang, Feng. where dueA1 indicates this
+is for assignment 1, wuchang is my CS login name, and Feng is my last name.
+
+• The tar file: Your electronic submission will be packaged as a tar file with your CS login name. For
+example, suppose your CS login name is "john". Your tar file will be called "john.tar". Once the
+TA untars the file, a directory "john/" will be created and your submitted material will be
+extracted to the directory "john". To create the tar file for each assignment, first you need to
+create a directory with your name and put your submission in that directory. See instruction for
+making the tar file. Note if the TA cannot recover the directory with your login name or
+sannot compile your program, you are not considered to have turned in your project.
+
+• Directory content organization: Once you've created the directory with your name described above,
+you will organize your files in the directory as follows:
+Your answers for all non‐programming problems should be in a single plain text file. Clearly label the
+problem number in your file.
+Each programming problem will have its own directory. Name each directory such that it's easy to know
+which problem it is for (e.g., P2 for problem 2). Place source code files, header files (if any), Makefile,
+and typescript in the directory.
+Do not include any binaries or unnecessary files with your submissions.
+
+• Email attachment: Send only your tar file in the attachment of the email. Note that you may submit
+your assignment multiple times if ncessary before it's due, although this is not encouraged. In the case of
+multiple submissions, we'll just use your last submission for grading.
+
+
