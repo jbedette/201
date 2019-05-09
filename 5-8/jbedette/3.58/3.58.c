@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 long decode2(long x, long y, long z){
-  long a = z - y;
-  long b = y * x;
-  return (((b << 63) >> 63) ^ x);
+  z -= y;
+  y *= x;
+  return (((y << 63) >> 63) ^ x);
 }
 
 int main(){
+  decode2(40,70,90);
   return 0;
 }
