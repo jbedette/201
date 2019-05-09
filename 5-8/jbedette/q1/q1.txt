@@ -1,0 +1,4 @@
+1.
+A) it always prints I have too many args
+B) compile error
+C) works fine because there is only one line of code after the if
