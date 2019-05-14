@@ -1,0 +1,2 @@
+2.
+A) if I run 'a' or 'A' after commenting out the break it also displays the    'e' text because once it starts it will continue until it hits a break 
