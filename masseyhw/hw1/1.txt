@@ -1,0 +1,78 @@
+Computer Systems Programming: Homework #1
+
+http://web.cecs.pdx.edu/~markem/CS201/homew...
+
+Computer Systems Programming, Homework #1
+Typing speed game
+You are to implement a game that tests a user's typing speed. The game
+randomly chooses words from an array of strings containing "The", "quick",
+"brown", "fox", "jumps", "over", "the", "lazy", "dog". Each word must appear
+exactly once. The program should output the time it takes for the user to
+correctly enter the entire array of words. If the user incorrectly types a word,
+the program must prompt the user to retype the incorrect word.
+Rules and requirements
+Random permutation of words should be generated via calls to srand()
+and rand()
+Seed srand() using the usec ﬁeld from a call to gettimeofday().
+Each permutation of the words must be possible.
+Ensure that your random permutation is generated using a minimal
+number of rand() calls
+Hint: A modulus that decreases for each word selected is
+suﬀicient for full credit
+Use timer macro "timersub()" for handling operations on struct
+timevals (/usr/include/sys/time.h)
+In case you are using c99, using timersub will generate an error. You
+must add the following line before all other #include lines to bypass
+it. #deﬁne _BSD_SOURCE
+Timing should begin when the random permutation is ﬁrst given
+to the user
+Timing should end when the user correctly inputs the
+permutation correctly.
+Hints and suggestions
+Consult the linux man pages for more information on rand()/srand(),
+gettimeofday(), timersub(), printf()/scanf(), strlen(), strncmp() etc.
+Once you have read in the input line, you will want to ﬂush the rest of
+the line. Here is a small piece of code that reads in 10 characters of
+input and then throws away the rest of the line.
+scanf("%10s", word);
+while((c = getchar()) != '\n' && c != EOF)
+;
+/* discard */
+Example game session
+
+1 of 2
+
+4/10/19, 11:16 AM
+=====================
+Computer Systems Programming: Homework #1
+
+http://web.cecs.pdx.edu/~markem/CS201/homew...
+
+% ls
+Makeﬁle typing_word_game.c
+% make
+gcc -m32 -g -o typing_word_game typing_word_game.c
+% ./typing_word_game
+This is a game that tests typing speed
+Type the following words:
+word #1 is fox: foxy
+Incorrect. Try again.
+word #1 is fox: fo
+Incorrect. Try again.
+word #1 is fox: fox
+word #2 is The: The
+word #3 is brown: brown
+word #4 is lazy: lazy
+word #5 is jumped: jumped
+word #6 is over: over
+word #7 is quick: quick
+word #8 is dog: dog
+word #9 is the: the
+Correct! Your time is: 20 sec and 222855 usec
+%
+
+2 of 2
+
+4/10/19, 11:16 AM
+
+

@@ -7,7 +7,9 @@ typedef unsigned float_bits;
 float_bits float_absval(float_bits f){
   unsigned s = f>>31;
   unsigned exp = f>>23 & 0xFF;
-  unsigned frac = f & 0x7FFFFF;
+  //unsigned frac = f & 0x7FFFFF;
+  unsigned frac = (f >> 9)<<9;
+  printf("\n%s", (char*)&s);
   if(exp == 255 && frac != 0){ return f;}//return f if NaN
   else if(exp < 255){
     return 0|(exp<<23)|frac;//strip sign-> absolute
@@ -21,6 +23,8 @@ float_bits float_absval(float_bits f){
 int main(){
   float_bits f =2147483647;//max unsigned
   int flag = 1;
+  float_absval(f);
+  /*
   for(; f>0; --f){
     float out = float_absval(f);
     float comp = (float)f;
@@ -33,5 +37,6 @@ int main(){
       //break;//i'd uncomment this break if you want to test things 
     }
   }
+  */
   return 0;
 }
