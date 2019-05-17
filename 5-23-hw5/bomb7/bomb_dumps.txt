@@ -1,0 +1,507 @@
+-function                                         _init                                             phase_4
+-label                                            _start                                            phase_5
+-line                                             alarm                                             phase_6
+-probe                                            alarm@plt                                         phase_defused
+-probe-dtrace                                     blank_line                                        phases.h
+-probe-stap                                       bomb.c                                            puts
+-qualified                                        close                                             puts@plt
+-source                                           close@plt                                         read
+/usr/include/stdio.h                              connect                                           read@plt
+/usr/include/stdlib.h                             connect@plt                                       read_line
+/usr/include/x86_64-linux-gnu/bits/libio.h        deregister_tm_clones                              read_six_numbers
+/usr/include/x86_64-linux-gnu/bits/stdio2.h       driver_post                                       register_tm_clones
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h  exit                                              rio_readlineb
+/usr/include/x86_64-linux-gnu/bits/types.h        exit@plt                                          secret_phase
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h   explode_bomb                                      send_msg
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h  fflush                                            sig_handler
+<built-in>                                        fflush@plt                                        sigalrm_handler
+__ctype_b_loc                                     fgets                                             signal
+__ctype_b_loc@plt                                 fgets@plt                                         signal@plt
+__cxa_finalize                                    fopen                                             skip
+__cxa_finalize@plt                                fopen@plt                                         sleep
+__do_global_dtors_aux                             frame_dummy                                       sleep@plt
+__errno_location                                  fun7                                              socket
+__errno_location@plt                              func4                                             socket@plt
+__fprintf_chk                                     getenv                                            stdio2.h
+__fprintf_chk@plt                                 getenv@plt                                        strcasecmp
+__isoc99_sscanf                                   gethostbyname                                     strcasecmp@plt
+__isoc99_sscanf@plt                               gethostbyname@plt                                 strcpy
+__libc_csu_fini                                   gethostname                                       strcpy@plt
+__libc_csu_init                                   gethostname@plt                                   string_length
+__memmove_chk                                     init_driver                                       strings_not_equal
+__memmove_chk@plt                                 init_timeout                                      strtol
+__printf_chk                                      initialize_bomb                                   strtol@plt
+__printf_chk@plt                                  initialize_bomb_solve                             submitr
+__sprintf_chk                                     invalid_phase                                     support.h
+__sprintf_chk@plt                                 main                                              write
+__stack_chk_fail                                  phase_1                                           write@plt
+__stack_chk_fail@plt                              phase_2                                           
+Dump of assembler code for function phase_1:
+   0x00005555555554d4 <+0>:     sub    $0x8,%rsp
+   0x00005555555554d8 <+4>:     lea    0x18d1(%rip),%rsi        # 0x555555556db
+0
+   0x00005555555554df <+11>:    callq  0x555555555a75 <strings_not_equal>
+   0x00005555555554e4 <+16>:    test   %eax,%eax
+   0x00005555555554e6 <+18>:    jne    0x5555555554ed <phase_1+25>
+   0x00005555555554e8 <+20>:    add    $0x8,%rsp
+   0x00005555555554ec <+24>:    retq   
+   0x00005555555554ed <+25>:    callq  0x555555555d79 <explode_bomb>
+   0x00005555555554f2 <+30>:    jmp    0x5555555554e8 <phase_1+20>
+End of assembler dump.
+
+Dump of assembler code for function phase_2:
+   0x00005555555554f4 <+0>:     push   %rbp
+   0x00005555555554f5 <+1>:     push   %rbx
+   0x00005555555554f6 <+2>:     sub    $0x28,%rsp
+   0x00005555555554fa <+6>:     mov    %fs:0x28,%rax
+   0x0000555555555503 <+15>:    mov    %rax,0x18(%rsp)
+   0x0000555555555508 <+20>:    xor    %eax,%eax
+   0x000055555555550a <+22>:    mov    %rsp,%rsi
+   0x000055555555550d <+25>:    callq  0x555555555db5 <read_six_numbers>
+   0x0000555555555512 <+30>:    cmpl   $0x0,(%rsp)
+   0x0000555555555516 <+34>:    js     0x555555555522 <phase_2+46>
+   0x0000555555555518 <+36>:    mov    $0x1,%ebx
+   0x000055555555551d <+41>:    mov    %rsp,%rbp
+   0x0000555555555520 <+44>:    jmp    0x555555555533 <phase_2+63>
+   0x0000555555555522 <+46>:    callq  0x555555555d79 <explode_bomb>
+   0x0000555555555527 <+51>:    jmp    0x555555555518 <phase_2+36>
+   0x0000555555555529 <+53>:    add    $0x1,%rbx
+   0x000055555555552d <+57>:    cmp    $0x6,%rbx
+   0x0000555555555531 <+61>:    je     0x555555555546 <phase_2+82>
+   0x0000555555555533 <+63>:    mov    %ebx,%eax
+   0x0000555555555535 <+65>:    add    -0x4(%rbp,%rbx,4),%eax
+   0x0000555555555539 <+69>:    cmp    %eax,0x0(%rbp,%rbx,4)
+   0x000055555555553d <+73>:    je     0x555555555529 <phase_2+53>
+   0x000055555555553f <+75>:    callq  0x555555555d79 <explode_bomb>
+   0x0000555555555544 <+80>:    jmp    0x555555555529 <phase_2+53>
+   0x0000555555555546 <+82>:    mov    0x18(%rsp),%rax
+   0x000055555555554b <+87>:    xor    %fs:0x28,%rax
+   0x0000555555555554 <+96>:    jne    0x55555555555d <phase_2+105>
+   0x0000555555555556 <+98>:    add    $0x28,%rsp
+   0x000055555555555a <+102>:   pop    %rbx
+   0x000055555555555b <+103>:   pop    %rbp
+   0x000055555555555c <+104>:   retq   
+   0x000055555555555d <+105>:   callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+Dump of assembler code for function phase_3:
+   0x0000555555555562 <+0>:     sub    $0x28,%rsp
+   0x0000555555555566 <+4>:     mov    %fs:0x28,%rax
+   0x000055555555556f <+13>:    mov    %rax,0x18(%rsp)
+   0x0000555555555574 <+18>:    xor    %eax,%eax
+   0x0000555555555576 <+20>:    lea    0xf(%rsp),%rcx
+   0x000055555555557b <+25>:    lea    0x10(%rsp),%rdx
+   0x0000555555555580 <+30>:    lea    0x14(%rsp),%r8
+   0x0000555555555585 <+35>:    lea    0x1882(%rip),%rsi        # 0x555555556e0
+e
+   0x000055555555558c <+42>:    callq  0x5555555551b0 <__isoc99_sscanf@plt>
+   0x0000555555555591 <+47>:    cmp    $0x2,%eax
+   0x0000555555555594 <+50>:    jle    0x5555555555b5 <phase_3+83>
+   0x0000555555555596 <+52>:    cmpl   $0x7,0x10(%rsp)
+   0x000055555555559b <+57>:    ja     0x5555555556a6 <phase_3+324>
+   0x00005555555555a1 <+63>:    mov    0x10(%rsp),%eax
+   0x00005555555555a5 <+67>:    lea    0x1874(%rip),%rdx        # 0x555555556e2
+0
+   0x00005555555555ac <+74>:    movslq (%rdx,%rax,4),%rax
+   0x00005555555555b0 <+78>:    add    %rdx,%rax
+   0x00005555555555b3 <+81>:    jmpq   *%rax
+   0x00005555555555b5 <+83>:    callq  0x555555555d79 <explode_bomb>
+   0x00005555555555ba <+88>:    jmp    0x555555555596 <phase_3+52>
+   0x00005555555555bc <+90>:    mov    $0x6a,%eax
+   0x00005555555555c1 <+95>:    cmpl   $0xc5,0x14(%rsp)
+   0x00005555555555c9 <+103>:   je     0x5555555556b0 <phase_3+334>
+   0x00005555555555cf <+109>:   callq  0x555555555d79 <explode_bomb>
+   0x00005555555555d4 <+114>:   mov    $0x6a,%eax
+   0x00005555555555d9 <+119>:   jmpq   0x5555555556b0 <phase_3+334>
+   0x00005555555555de <+124>:   mov    $0x6d,%eax
+   0x00005555555555e3 <+129>:   cmpl   $0xb6,0x14(%rsp)
+   0x00005555555555eb <+137>:   je     0x5555555556b0 <phase_3+334>
+   0x00005555555555f1 <+143>:   callq  0x555555555d79 <explode_bomb>
+   0x00005555555555f6 <+148>:   mov    $0x6d,%eax
+   0x00005555555555fb <+153>:   jmpq   0x5555555556b0 <phase_3+334>
+   0x0000555555555600 <+158>:   mov    $0x7a,%eax
+   0x0000555555555605 <+163>:   cmpl   $0x295,0x14(%rsp)
+   0x000055555555560d <+171>:   je     0x5555555556b0 <phase_3+334>
+   0x0000555555555613 <+177>:   callq  0x555555555d79 <explode_bomb>
+   0x0000555555555618 <+182>:   mov    $0x7a,%eax
+---Type <return> to continue, or q <return> to quit---
+   0x000055555555561d <+187>:   jmpq   0x5555555556b0 <phase_3+334>
+   0x0000555555555622 <+192>:   mov    $0x6b,%eax
+   0x0000555555555627 <+197>:   cmpl   $0x387,0x14(%rsp)
+   0x000055555555562f <+205>:   je     0x5555555556b0 <phase_3+334>
+   0x0000555555555631 <+207>:   callq  0x555555555d79 <explode_bomb>
+   0x0000555555555636 <+212>:   mov    $0x6b,%eax
+   0x000055555555563b <+217>:   jmp    0x5555555556b0 <phase_3+334>
+   0x000055555555563d <+219>:   mov    $0x6e,%eax
+   0x0000555555555642 <+224>:   cmpl   $0x36f,0x14(%rsp)
+   0x000055555555564a <+232>:   je     0x5555555556b0 <phase_3+334>
+   0x000055555555564c <+234>:   callq  0x555555555d79 <explode_bomb>
+   0x0000555555555651 <+239>:   mov    $0x6e,%eax
+   0x0000555555555656 <+244>:   jmp    0x5555555556b0 <phase_3+334>
+   0x0000555555555658 <+246>:   mov    $0x74,%eax
+   0x000055555555565d <+251>:   cmpl   $0x1fa,0x14(%rsp)
+   0x0000555555555665 <+259>:   je     0x5555555556b0 <phase_3+334>
+   0x0000555555555667 <+261>:   callq  0x555555555d79 <explode_bomb>
+   0x000055555555566c <+266>:   mov    $0x74,%eax
+   0x0000555555555671 <+271>:   jmp    0x5555555556b0 <phase_3+334>
+   0x0000555555555673 <+273>:   mov    $0x71,%eax
+   0x0000555555555678 <+278>:   cmpl   $0xfb,0x14(%rsp)
+   0x0000555555555680 <+286>:   je     0x5555555556b0 <phase_3+334>
+   0x0000555555555682 <+288>:   callq  0x555555555d79 <explode_bomb>
+   0x0000555555555687 <+293>:   mov    $0x71,%eax
+   0x000055555555568c <+298>:   jmp    0x5555555556b0 <phase_3+334>
+   0x000055555555568e <+300>:   mov    $0x63,%eax
+   0x0000555555555693 <+305>:   cmpl   $0x51,0x14(%rsp)
+   0x0000555555555698 <+310>:   je     0x5555555556b0 <phase_3+334>
+   0x000055555555569a <+312>:   callq  0x555555555d79 <explode_bomb>
+   0x000055555555569f <+317>:   mov    $0x63,%eax
+   0x00005555555556a4 <+322>:   jmp    0x5555555556b0 <phase_3+334>
+   0x00005555555556a6 <+324>:   callq  0x555555555d79 <explode_bomb>
+   0x00005555555556ab <+329>:   mov    $0x78,%eax
+   0x00005555555556b0 <+334>:   cmp    %al,0xf(%rsp)
+   0x00005555555556b4 <+338>:   je     0x5555555556bb <phase_3+345>
+   0x00005555555556b6 <+340>:   callq  0x555555555d79 <explode_bomb>
+   0x00005555555556bb <+345>:   mov    0x18(%rsp),%rax
+   0x00005555555556c0 <+350>:   xor    %fs:0x28,%rax
+   0x00005555555556c9 <+359>:   jne    0x5555555556d0 <phase_3+366>
+   0x00005555555556cb <+361>:   add    $0x28,%rsp
+---Type <return> to continue, or q <return> to quit---
+   0x00005555555556cf <+365>:   retq   
+   0x00005555555556d0 <+366>:   callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+
+Dump of assembler code for function phase_4:
+   0x0000555555555714 <+0>:     sub    $0x18,%rsp
+   0x0000555555555718 <+4>:     mov    %fs:0x28,%rax
+   0x0000555555555721 <+13>:    mov    %rax,0x8(%rsp)
+   0x0000555555555726 <+18>:    xor    %eax,%eax
+   0x0000555555555728 <+20>:    lea    0x4(%rsp),%rcx
+   0x000055555555572d <+25>:    mov    %rsp,%rdx
+   0x0000555555555730 <+28>:    lea    0x1996(%rip),%rsi        # 0x5555555570c
+d
+   0x0000555555555737 <+35>:    callq  0x5555555551b0 <__isoc99_sscanf@plt>
+   0x000055555555573c <+40>:    cmp    $0x2,%eax
+   0x000055555555573f <+43>:    jne    0x555555555747 <phase_4+51>
+   0x0000555555555741 <+45>:    cmpl   $0xe,(%rsp)
+   0x0000555555555745 <+49>:    jbe    0x55555555574c <phase_4+56>
+   0x0000555555555747 <+51>:    callq  0x555555555d79 <explode_bomb>
+   0x000055555555574c <+56>:    mov    $0xe,%edx
+   0x0000555555555751 <+61>:    mov    $0x0,%esi
+   0x0000555555555756 <+66>:    mov    (%rsp),%edi
+   0x0000555555555759 <+69>:    callq  0x5555555556d5 <func4>
+   0x000055555555575e <+74>:    cmp    $0x2,%eax
+   0x0000555555555761 <+77>:    jne    0x55555555576a <phase_4+86>
+   0x0000555555555763 <+79>:    cmpl   $0x2,0x4(%rsp)
+   0x0000555555555768 <+84>:    je     0x55555555576f <phase_4+91>
+   0x000055555555576a <+86>:    callq  0x555555555d79 <explode_bomb>
+   0x000055555555576f <+91>:    mov    0x8(%rsp),%rax
+   0x0000555555555774 <+96>:    xor    %fs:0x28,%rax
+   0x000055555555577d <+105>:   jne    0x555555555784 <phase_4+112>
+   0x000055555555577f <+107>:   add    $0x18,%rsp
+   0x0000555555555783 <+111>:   retq   
+   0x0000555555555784 <+112>:   callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+Dump of assembler code for function phase_5:
+   0x0000555555555789 <+0>:     sub    $0x18,%rsp
+   0x000055555555578d <+4>:     mov    %fs:0x28,%rax
+   0x0000555555555796 <+13>:    mov    %rax,0x8(%rsp)
+   0x000055555555579b <+18>:    xor    %eax,%eax
+   0x000055555555579d <+20>:    lea    0x4(%rsp),%rcx
+   0x00005555555557a2 <+25>:    mov    %rsp,%rdx
+   0x00005555555557a5 <+28>:    lea    0x1921(%rip),%rsi        # 0x5555555570c
+d
+   0x00005555555557ac <+35>:    callq  0x5555555551b0 <__isoc99_sscanf@plt>
+   0x00005555555557b1 <+40>:    cmp    $0x1,%eax
+   0x00005555555557b4 <+43>:    jle    0x555555555810 <phase_5+135>
+   0x00005555555557b6 <+45>:    mov    (%rsp),%eax
+   0x00005555555557b9 <+48>:    and    $0xf,%eax
+   0x00005555555557bc <+51>:    mov    %eax,(%rsp)
+   0x00005555555557bf <+54>:    cmp    $0xf,%eax
+   0x00005555555557c2 <+57>:    je     0x5555555557f6 <phase_5+109>
+   0x00005555555557c4 <+59>:    mov    $0x0,%ecx
+   0x00005555555557c9 <+64>:    mov    $0x0,%edx
+   0x00005555555557ce <+69>:    lea    0x166b(%rip),%rsi        # 0x555555556e4
+0 <array.3418>
+   0x00005555555557d5 <+76>:    add    $0x1,%edx
+   0x00005555555557d8 <+79>:    cltq   
+   0x00005555555557da <+81>:    mov    (%rsi,%rax,4),%eax
+   0x00005555555557dd <+84>:    add    %eax,%ecx
+   0x00005555555557df <+86>:    cmp    $0xf,%eax
+   0x00005555555557e2 <+89>:    jne    0x5555555557d5 <phase_5+76>
+   0x00005555555557e4 <+91>:    movl   $0xf,(%rsp)
+   0x00005555555557eb <+98>:    cmp    $0xf,%edx
+   0x00005555555557ee <+101>:   jne    0x5555555557f6 <phase_5+109>
+   0x00005555555557f0 <+103>:   cmp    %ecx,0x4(%rsp)
+   0x00005555555557f4 <+107>:   je     0x5555555557fb <phase_5+114>
+   0x00005555555557f6 <+109>:   callq  0x555555555d79 <explode_bomb>
+   0x00005555555557fb <+114>:   mov    0x8(%rsp),%rax
+   0x0000555555555800 <+119>:   xor    %fs:0x28,%rax
+   0x0000555555555809 <+128>:   jne    0x555555555817 <phase_5+142>
+   0x000055555555580b <+130>:   add    $0x18,%rsp
+   0x000055555555580f <+134>:   retq   
+   0x0000555555555810 <+135>:   callq  0x555555555d79 <explode_bomb>
+   0x0000555555555815 <+140>:   jmp    0x5555555557b6 <phase_5+45>
+---Type <return> to continue, or q <return> to quit---
+   0x0000555555555817 <+142>:   callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+Dump of assembler code for function phase_6:
+   0x000055555555581c <+0>:     push   %r13
+   0x000055555555581e <+2>:     push   %r12
+   0x0000555555555820 <+4>:     push   %rbp
+   0x0000555555555821 <+5>:     push   %rbx
+   0x0000555555555822 <+6>:     sub    $0x68,%rsp
+   0x0000555555555826 <+10>:    mov    %fs:0x28,%rax
+   0x000055555555582f <+19>:    mov    %rax,0x58(%rsp)
+   0x0000555555555834 <+24>:    xor    %eax,%eax
+   0x0000555555555836 <+26>:    mov    %rsp,%r12
+   0x0000555555555839 <+29>:    mov    %r12,%rsi
+   0x000055555555583c <+32>:    callq  0x555555555db5 <read_six_numbers>
+   0x0000555555555841 <+37>:    mov    $0x0,%r13d
+   0x0000555555555847 <+43>:    jmp    0x55555555586e <phase_6+82>
+   0x0000555555555849 <+45>:    callq  0x555555555d79 <explode_bomb>
+   0x000055555555584e <+50>:    jmp    0x55555555587d <phase_6+97>
+   0x0000555555555850 <+52>:    add    $0x1,%ebx
+   0x0000555555555853 <+55>:    cmp    $0x5,%ebx
+   0x0000555555555856 <+58>:    jg     0x55555555586a <phase_6+78>
+   0x0000555555555858 <+60>:    movslq %ebx,%rax
+   0x000055555555585b <+63>:    mov    (%rsp,%rax,4),%eax
+   0x000055555555585e <+66>:    cmp    %eax,0x0(%rbp)
+   0x0000555555555861 <+69>:    jne    0x555555555850 <phase_6+52>
+   0x0000555555555863 <+71>:    callq  0x555555555d79 <explode_bomb>
+   0x0000555555555868 <+76>:    jmp    0x555555555850 <phase_6+52>
+   0x000055555555586a <+78>:    add    $0x4,%r12
+   0x000055555555586e <+82>:    mov    %r12,%rbp
+   0x0000555555555871 <+85>:    mov    (%r12),%eax
+   0x0000555555555875 <+89>:    sub    $0x1,%eax
+   0x0000555555555878 <+92>:    cmp    $0x5,%eax
+   0x000055555555587b <+95>:    ja     0x555555555849 <phase_6+45>
+   0x000055555555587d <+97>:    add    $0x1,%r13d
+   0x0000555555555881 <+101>:   cmp    $0x6,%r13d
+   0x0000555555555885 <+105>:   je     0x5555555558bc <phase_6+160>
+   0x0000555555555887 <+107>:   mov    %r13d,%ebx
+   0x000055555555588a <+110>:   jmp    0x555555555858 <phase_6+60>
+   0x000055555555588c <+112>:   mov    0x8(%rdx),%rdx
+   0x0000555555555890 <+116>:   add    $0x1,%eax
+   0x0000555555555893 <+119>:   cmp    %ecx,%eax
+   0x0000555555555895 <+121>:   jne    0x55555555588c <phase_6+112>
+---Type <return> to continue, or q <return> to quit---
+   0x0000555555555897 <+123>:   mov    %rdx,0x20(%rsp,%rsi,8)
+   0x000055555555589c <+128>:   add    $0x1,%rsi
+   0x00005555555558a0 <+132>:   cmp    $0x6,%rsi
+   0x00005555555558a4 <+136>:   je     0x5555555558c3 <phase_6+167>
+   0x00005555555558a6 <+138>:   mov    (%rsp,%rsi,4),%ecx
+   0x00005555555558a9 <+141>:   mov    $0x1,%eax
+   0x00005555555558ae <+146>:   lea    0x20297b(%rip),%rdx        # 0x555555758
+230 <node1>
+   0x00005555555558b5 <+153>:   cmp    $0x1,%ecx
+   0x00005555555558b8 <+156>:   jg     0x55555555588c <phase_6+112>
+   0x00005555555558ba <+158>:   jmp    0x555555555897 <phase_6+123>
+   0x00005555555558bc <+160>:   mov    $0x0,%esi
+   0x00005555555558c1 <+165>:   jmp    0x5555555558a6 <phase_6+138>
+   0x00005555555558c3 <+167>:   mov    0x20(%rsp),%rbx
+   0x00005555555558c8 <+172>:   mov    0x28(%rsp),%rax
+   0x00005555555558cd <+177>:   mov    %rax,0x8(%rbx)
+   0x00005555555558d1 <+181>:   mov    0x30(%rsp),%rdx
+   0x00005555555558d6 <+186>:   mov    %rdx,0x8(%rax)
+   0x00005555555558da <+190>:   mov    0x38(%rsp),%rax
+   0x00005555555558df <+195>:   mov    %rax,0x8(%rdx)
+   0x00005555555558e3 <+199>:   mov    0x40(%rsp),%rdx
+   0x00005555555558e8 <+204>:   mov    %rdx,0x8(%rax)
+   0x00005555555558ec <+208>:   mov    0x48(%rsp),%rax
+   0x00005555555558f1 <+213>:   mov    %rax,0x8(%rdx)
+   0x00005555555558f5 <+217>:   movq   $0x0,0x8(%rax)
+   0x00005555555558fd <+225>:   mov    $0x5,%ebp
+   0x0000555555555902 <+230>:   jmp    0x55555555590d <phase_6+241>
+   0x0000555555555904 <+232>:   mov    0x8(%rbx),%rbx
+   0x0000555555555908 <+236>:   sub    $0x1,%ebp
+   0x000055555555590b <+239>:   je     0x55555555591e <phase_6+258>
+   0x000055555555590d <+241>:   mov    0x8(%rbx),%rax
+   0x0000555555555911 <+245>:   mov    (%rax),%eax
+   0x0000555555555913 <+247>:   cmp    %eax,(%rbx)
+   0x0000555555555915 <+249>:   jle    0x555555555904 <phase_6+232>
+   0x0000555555555917 <+251>:   callq  0x555555555d79 <explode_bomb>
+   0x000055555555591c <+256>:   jmp    0x555555555904 <phase_6+232>
+   0x000055555555591e <+258>:   mov    0x58(%rsp),%rax
+   0x0000555555555923 <+263>:   xor    %fs:0x28,%rax
+   0x000055555555592c <+272>:   jne    0x555555555939 <phase_6+285>
+   0x000055555555592e <+274>:   add    $0x68,%rsp
+---Type <return> to continue, or q <return> to quit---
+   0x0000555555555932 <+278>:   pop    %rbx
+   0x0000555555555933 <+279>:   pop    %rbp
+   0x0000555555555934 <+280>:   pop    %r12
+   0x0000555555555936 <+282>:   pop    %r13
+   0x0000555555555938 <+284>:   retq   
+   0x0000555555555939 <+285>:   callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+Dump of assembler code for function phase_defused:
+   0x0000000000001f3a <+0>:     sub    $0x78,%rsp
+   0x0000000000001f3e <+4>:     mov    %fs:0x28,%rax
+   0x0000000000001f47 <+13>:    mov    %rax,0x68(%rsp)
+   0x0000000000001f4c <+18>:    xor    %eax,%eax
+   0x0000000000001f4e <+20>:    mov    $0x1,%edi
+   0x0000000000001f53 <+25>:    callq  0x1c55 <send_msg>
+   0x0000000000001f58 <+30>:    cmpl   $0x6,0x20274d(%rip)        # 0x2046ac <num_input_strings>
+   0x0000000000001f5f <+37>:    je     0x1f7a <phase_defused+64>
+   0x0000000000001f61 <+39>:    mov    0x68(%rsp),%rax
+   0x0000000000001f66 <+44>:    xor    %fs:0x28,%rax
+   0x0000000000001f6f <+53>:    jne    0x1ff9 <phase_defused+191>
+   0x0000000000001f75 <+59>:    add    $0x78,%rsp
+   0x0000000000001f79 <+63>:    retq   
+   0x0000000000001f7a <+64>:    lea    0xc(%rsp),%rcx
+   0x0000000000001f7f <+69>:    lea    0x8(%rsp),%rdx
+   0x0000000000001f84 <+74>:    lea    0x10(%rsp),%r8
+   0x0000000000001f89 <+79>:    lea    0x1187(%rip),%rsi        # 0x3117
+   0x0000000000001f90 <+86>:    lea    0x202819(%rip),%rdi        # 0x2047b0 <input_strings+240>
+   0x0000000000001f97 <+93>:    mov    $0x0,%eax
+   0x0000000000001f9c <+98>:    callq  0x11b0 <__isoc99_sscanf@plt>
+   0x0000000000001fa1 <+103>:   cmp    $0x3,%eax
+   0x0000000000001fa4 <+106>:   je     0x1fc0 <phase_defused+134>
+   0x0000000000001fa6 <+108>:   lea    0x102b(%rip),%rdi        # 0x2fd8
+   0x0000000000001fad <+115>:   callq  0x10f0 <puts@plt>
+   0x0000000000001fb2 <+120>:   lea    0x104f(%rip),%rdi        # 0x3008
+   0x0000000000001fb9 <+127>:   callq  0x10f0 <puts@plt>
+   0x0000000000001fbe <+132>:   jmp    0x1f61 <phase_defused+39>
+   0x0000000000001fc0 <+134>:   lea    0x10(%rsp),%rdi
+   0x0000000000001fc5 <+139>:   lea    0x1154(%rip),%rsi        # 0x3120
+   0x0000000000001fcc <+146>:   callq  0x1a75 <strings_not_equal>
+   0x0000000000001fd1 <+151>:   test   %eax,%eax
+   0x0000000000001fd3 <+153>:   jne    0x1fa6 <phase_defused+108>
+   0x0000000000001fd5 <+155>:   lea    0xf9c(%rip),%rdi        # 0x2f78
+   0x0000000000001fdc <+162>:   callq  0x10f0 <puts@plt>
+   0x0000000000001fe1 <+167>:   lea    0xfb8(%rip),%rdi        # 0x2fa0
+   0x0000000000001fe8 <+174>:   callq  0x10f0 <puts@plt>
+   0x0000000000001fed <+179>:   mov    $0x0,%eax
+   0x0000000000001ff2 <+184>:   callq  0x197d <secret_phase>
+   0x0000000000001ff7 <+189>:   jmp    0x1fa6 <phase_defused+108>
+---Type <return> to continue, or q <return> to quit---
+   0x0000000000001ff9 <+191>:   callq  0x1110 <__stack_chk_fail@plt>
+End of assembler dump.
+
+
+(gdb) disas secret_phase 
+Dump of assembler code for function secret_phase:
+   0x000000000000197d <+0>:     push   %rbx
+   0x000000000000197e <+1>:     callq  0x1df6 <read_line>
+   0x0000000000001983 <+6>:     mov    $0xa,%edx
+   0x0000000000001988 <+11>:    mov    $0x0,%esi
+   0x000000000000198d <+16>:    mov    %rax,%rdi
+   0x0000000000001990 <+19>:    callq  0x1190 <strtol@plt>
+   0x0000000000001995 <+24>:    mov    %rax,%rbx
+   0x0000000000001998 <+27>:    lea    -0x1(%rax),%eax
+   0x000000000000199b <+30>:    cmp    $0x3e8,%eax
+   0x00000000000019a0 <+35>:    ja     0x19c7 <secret_phase+74>
+   0x00000000000019a2 <+37>:    mov    %ebx,%esi
+   0x00000000000019a4 <+39>:    lea    0x2027a5(%rip),%rdi        # 0x204150 <n1>
+   0x00000000000019ab <+46>:    callq  0x193e <fun7>
+   0x00000000000019b0 <+51>:    test   %eax,%eax
+   0x00000000000019b2 <+53>:    jne    0x19ce <secret_phase+81>
+   0x00000000000019b4 <+55>:    lea    0x142d(%rip),%rdi        # 0x2de8
+   0x00000000000019bb <+62>:    callq  0x10f0 <puts@plt>
+   0x00000000000019c0 <+67>:    callq  0x1f3a <phase_defused>
+   0x00000000000019c5 <+72>:    pop    %rbx
+   0x00000000000019c6 <+73>:    retq   
+   0x00000000000019c7 <+74>:    callq  0x1d79 <explode_bomb>
+   0x00000000000019cc <+79>:    jmp    0x19a2 <secret_phase+37>
+   0x00000000000019ce <+81>:    callq  0x1d79 <explode_bomb>
+   0x00000000000019d3 <+86>:    jmp    0x19b4 <secret_phase+55>
+End of assembler dump.
+
+Dump of assembler code for function fun7:
+   0x000000000000193e <+0>:     test   %rdi,%rdi
+   0x0000000000001941 <+3>:     je     0x1977 <fun7+57>
+   0x0000000000001943 <+5>:     sub    $0x8,%rsp
+   0x0000000000001947 <+9>:     mov    (%rdi),%edx
+   0x0000000000001949 <+11>:    cmp    %esi,%edx
+   0x000000000000194b <+13>:    jg     0x195b <fun7+29>
+   0x000000000000194d <+15>:    mov    $0x0,%eax
+   0x0000000000001952 <+20>:    cmp    %esi,%edx
+   0x0000000000001954 <+22>:    jne    0x1968 <fun7+42>
+   0x0000000000001956 <+24>:    add    $0x8,%rsp
+   0x000000000000195a <+28>:    retq   
+   0x000000000000195b <+29>:    mov    0x8(%rdi),%rdi
+   0x000000000000195f <+33>:    callq  0x193e <fun7>
+   0x0000000000001964 <+38>:    add    %eax,%eax
+   0x0000000000001966 <+40>:    jmp    0x1956 <fun7+24>
+   0x0000000000001968 <+42>:    mov    0x10(%rdi),%rdi
+   0x000000000000196c <+46>:    callq  0x193e <fun7>
+   0x0000000000001971 <+51>:    lea    0x1(%rax,%rax,1),%eax
+   0x0000000000001975 <+55>:    jmp    0x1956 <fun7+24>
+   0x0000000000001977 <+57>:    mov    $0xffffffff,%eax
+   0x000000000000197c <+62>:    retq   
+End of assembler dump.
+
+Dump of assembler code for function explode_bomb:
+   0x0000000000001d79 <+0>:     sub    $0x8,%rsp
+   0x0000000000001d7d <+4>:     lea    0x131d(%rip),%rdi        # 0x30a1
+   0x0000000000001d84 <+11>:    callq  0x10f0 <puts@plt>
+   0x0000000000001d89 <+16>:    lea    0x131a(%rip),%rdi        # 0x30aa
+   0x0000000000001d90 <+23>:    callq  0x10f0 <puts@plt>
+   0x0000000000001d95 <+28>:    mov    $0x0,%edi
+   0x0000000000001d9a <+33>:    callq  0x1c55 <send_msg>
+   0x0000000000001d9f <+38>:    lea    0x11aa(%rip),%rdi        # 0x2f50
+   0x0000000000001da6 <+45>:    callq  0x10f0 <puts@plt>
+   0x0000000000001dab <+50>:    mov    $0x8,%edi
+   0x0000000000001db0 <+55>:    callq  0x11f0 <exit@plt>
+End of assembler dump.
+
+Dump of assembler code for function initialize_bomb:
+   0x0000000000001adc <+0>:     push   %rbp
+   0x0000000000001add <+1>:     push   %rbx
+   0x0000000000001ade <+2>:     sub    $0x2058,%rsp
+   0x0000000000001ae5 <+9>:     mov    %fs:0x28,%rax
+   0x0000000000001aee <+18>:    mov    %rax,0x2048(%rsp)
+   0x0000000000001af6 <+26>:    xor    %eax,%eax
+   0x0000000000001af8 <+28>:    lea    -0x12a(%rip),%rsi        # 0x19d5 <sig_handler>
+   0x0000000000001aff <+35>:    mov    $0x2,%edi
+   0x0000000000001b04 <+40>:    callq  0x1160 <signal@plt>
+   0x0000000000001b09 <+45>:    mov    %rsp,%rdi
+   0x0000000000001b0c <+48>:    mov    $0x40,%esi
+   0x0000000000001b11 <+53>:    callq  0x11e0 <gethostname@plt>
+   0x0000000000001b16 <+58>:    test   %eax,%eax
+   0x0000000000001b18 <+60>:    jne    0x1b5f <initialize_bomb+131>
+   0x0000000000001b1a <+62>:    mov    0x20275f(%rip),%rdi        # 0x204280 <host_table>
+   0x0000000000001b21 <+69>:    lea    0x202760(%rip),%rbx        # 0x204288 <host_table+8>
+   0x0000000000001b28 <+76>:    mov    %rsp,%rbp
+   0x0000000000001b2b <+79>:    test   %rdi,%rdi
+   0x0000000000001b2e <+82>:    je     0x1b49 <initialize_bomb+109>
+   0x0000000000001b30 <+84>:    mov    %rbp,%rsi
+   0x0000000000001b33 <+87>:    callq  0x10c0 <strcasecmp@plt>
+   0x0000000000001b38 <+92>:    test   %eax,%eax
+   0x0000000000001b3a <+94>:    je     0x1b9a <initialize_bomb+190>
+   0x0000000000001b3c <+96>:    add    $0x8,%rbx
+   0x0000000000001b40 <+100>:   mov    -0x8(%rbx),%rdi
+   0x0000000000001b44 <+104>:   test   %rdi,%rdi
+   0x0000000000001b47 <+107>:   jne    0x1b30 <initialize_bomb+84>
+   0x0000000000001b49 <+109>:   lea    0x13a0(%rip),%rdi        # 0x2ef0
+   0x0000000000001b50 <+116>:   callq  0x10f0 <puts@plt>
+   0x0000000000001b55 <+121>:   mov    $0x8,%edi
+   0x0000000000001b5a <+126>:   callq  0x11f0 <exit@plt>
+   0x0000000000001b5f <+131>:   lea    0x1352(%rip),%rdi        # 0x2eb8
+   0x0000000000001b66 <+138>:   callq  0x10f0 <puts@plt>
+   0x0000000000001b6b <+143>:   mov    $0x8,%edi
+   0x0000000000001b70 <+148>:   callq  0x11f0 <exit@plt>
+   0x0000000000001b75 <+153>:   lea    0x40(%rsp),%rdx
+   0x0000000000001b7a <+158>:   lea    0x14e9(%rip),%rsi        # 0x306a
+   0x0000000000001b81 <+165>:   mov    $0x1,%edi
+   0x0000000000001b86 <+170>:   mov    $0x0,%eax
+---Type <return> to continue, or q <return> to quit---
+   0x0000000000001b8b <+175>:   callq  0x11c0 <__printf_chk@plt>
+   0x0000000000001b90 <+180>:   mov    $0x8,%edi
+   0x0000000000001b95 <+185>:   callq  0x11f0 <exit@plt>
+   0x0000000000001b9a <+190>:   lea    0x40(%rsp),%rdi
+   0x0000000000001b9f <+195>:   callq  0x2956 <init_driver>
+   0x0000000000001ba4 <+200>:   test   %eax,%eax
+   0x0000000000001ba6 <+202>:   js     0x1b75 <initialize_bomb+153>
+   0x0000000000001ba8 <+204>:   mov    0x2048(%rsp),%rax
+   0x0000000000001bb0 <+212>:   xor    %fs:0x28,%rax
+   0x0000000000001bb9 <+221>:   jne    0x1bc5 <initialize_bomb+233>
+   0x0000000000001bbb <+223>:   add    $0x2058,%rsp
+   0x0000000000001bc2 <+230>:   pop    %rbx
+   0x0000000000001bc3 <+231>:   pop    %rbp
+   0x0000000000001bc4 <+232>:   retq   
+   0x0000000000001bc5 <+233>:   callq  0x1110 <__stack_chk_fail@plt>
+End of assembler dump.
