@@ -1,0 +1,35 @@
+00000000000014f4 <phase_2>:
+    14f4:	55                   	push   %rbp
+    14f5:	53                   	push   %rbx
+    14f6:	48 83 ec 28          	sub    $0x28,%rsp
+    14fa:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1501:	00 00 
+    1503:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    1508:	31 c0                	xor    %eax,%eax
+    150a:	48 89 e6             	mov    %rsp,%rsi
+    150d:	e8 a3 08 00 00       	callq  1db5 <read_six_numbers>
+    1512:	83 3c 24 00          	cmpl   $0x0,(%rsp)
+    1516:	78 0a   p            	js     1522 <phase_2+0x2e>
+    1518:	bb 01 00 00 00       	mov    $0x1,%ebx
+    151d:	48 89 e5             	mov    %rsp,%rbp
+    1520:	eb 11                	jmp    1533 <phase_2+0x3f>
+    1522:	e8 52 08 00 00       	callq  1d79 <explode_bomb>
+    1527:	eb ef                	jmp    1518 <phase_2+0x24>
+    1529:	48 83 c3 01          	add    $0x1,%rbx
+    152d:	48 83 fb 06          	cmp    $0x6,%rbx
+    1531:	74 13                	je     1546 <phase_2+0x52>
+    1533:	89 d8                	mov    %ebx,%eax
+    1535:	03 44 9d fc          	add    -0x4(%rbp,%rbx,4),%eax
+    1539:	39 44 9d 00          	cmp    %eax,0x0(%rbp,%rbx,4)
+    153d:	74 ea                	je     1529 <phase_2+0x35>
+    153f:	e8 35 08 00 00       	callq  1d79 <explode_bomb>
+    1544:	eb e3                	jmp    1529 <phase_2+0x35>
+    1546:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    154b:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    1552:	00 00 
+    1554:	75 07                	jne    155d <phase_2+0x69>
+    1556:	48 83 c4 28          	add    $0x28,%rsp
+    155a:	5b                   	pop    %rbx
+    155b:	5d                   	pop    %rbp
+    155c:	c3                   	retq   
+    155d:	e8 ae fb ff ff       	callq  1110 <__stack_chk_fail@plt>

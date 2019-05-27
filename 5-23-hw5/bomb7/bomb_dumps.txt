@@ -36,6 +36,7 @@ __sprintf_chk                                     invalid_phase                 
 __sprintf_chk@plt                                 main                                              write
 __stack_chk_fail                                  phase_1                                           write@plt
 __stack_chk_fail@plt                              phase_2                                           
+
 Dump of assembler code for function phase_1:
    0x00005555555554d4 <+0>:     sub    $0x8,%rsp
    0x00005555555554d8 <+4>:     lea    0x18d1(%rip),%rsi        # 0x555555556db

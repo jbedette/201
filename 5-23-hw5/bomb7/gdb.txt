@@ -1,0 +1,707 @@
+Dump of assembler code for function phase_2:
+   0x00005555555554f4 <+0>:	push   %rbp
+   0x00005555555554f5 <+1>:	push   %rbx
+   0x00005555555554f6 <+2>:	sub    $0x28,%rsp
+   0x00005555555554fa <+6>:	mov    %fs:0x28,%rax
+   0x0000555555555503 <+15>:	mov    %rax,0x18(%rsp)
+   0x0000555555555508 <+20>:	xor    %eax,%eax
+   0x000055555555550a <+22>:	mov    %rsp,%rsi
+   0x000055555555550d <+25>:	callq  0x555555555db5 <read_six_numbers>
+=> 0x0000555555555512 <+30>:	cmpl   $0x0,(%rsp)
+   0x0000555555555516 <+34>:	js     0x555555555522 <phase_2+46>
+   0x0000555555555518 <+36>:	mov    $0x1,%ebx
+   0x000055555555551d <+41>:	mov    %rsp,%rbp
+   0x0000555555555520 <+44>:	jmp    0x555555555533 <phase_2+63>
+   0x0000555555555522 <+46>:	callq  0x555555555d79 <explode_bomb>
+   0x0000555555555527 <+51>:	jmp    0x555555555518 <phase_2+36>
+   0x0000555555555529 <+53>:	add    $0x1,%rbx
+   0x000055555555552d <+57>:	cmp    $0x6,%rbx
+   0x0000555555555531 <+61>:	je     0x555555555546 <phase_2+82>
+   0x0000555555555533 <+63>:	mov    %ebx,%eax
+   0x0000555555555535 <+65>:	add    -0x4(%rbp,%rbx,4),%eax
+   0x0000555555555539 <+69>:	cmp    %eax,0x0(%rbp,%rbx,4)
+   0x000055555555553d <+73>:	je     0x555555555529 <phase_2+53>
+   0x000055555555553f <+75>:	callq  0x555555555d79 <explode_bomb>
+   0x0000555555555544 <+80>:	jmp    0x555555555529 <phase_2+53>
+   0x0000555555555546 <+82>:	mov    0x18(%rsp),%rax
+   0x000055555555554b <+87>:	xor    %fs:0x28,%rax
+   0x0000555555555554 <+96>:	jne    0x55555555555d <phase_2+105>
+   0x0000555555555556 <+98>:	add    $0x28,%rsp
+   0x000055555555555a <+102>:	pop    %rbx
+   0x000055555555555b <+103>:	pop    %rbp
+   0x000055555555555c <+104>:	retq   
+   0x000055555555555d <+105>:	callq  0x555555555110 <__stack_chk_fail@plt>
+End of assembler dump.
+rax            0x6	6
+rbx            0x7fffffffea78	140737488349816
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x555555556be0	0x555555556be0 <__libc_csu_init>
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555512	0x555555555512 <phase_2+30>
+eflags         0x206	[ PF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+
+Breakpoint 8, 0x0000555555555516 in phase_2 ()
+rax            0x6	6
+rbx            0x7fffffffea78	140737488349816
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x555555556be0	0x555555556be0 <__libc_csu_init>
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555516	0x555555555516 <phase_2+34>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x6	6
+rbx            0x7fffffffea78	140737488349816
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x555555556be0	0x555555556be0 <__libc_csu_init>
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555516	0x555555555516 <phase_2+34>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555518 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x6	6
+rbx            0x7fffffffea78	140737488349816
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x555555556be0	0x555555556be0 <__libc_csu_init>
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555518	0x555555555518 <phase_2+36>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555551d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x6	6
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x555555556be0	0x555555556be0 <__libc_csu_init>
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555551d	0x55555555551d <phase_2+41>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+
+Breakpoint 9, 0x0000555555555520 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x6	6
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555520	0x555555555520 <phase_2+44>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555533 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x6	6
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555533	0x555555555533 <phase_2+63>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555535 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x1	1
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555535	0x555555555535 <phase_2+65>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555539 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555539	0x555555555539 <phase_2+69>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555553d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555553d	0x55555555553d <phase_2+73>
+eflags         0x246	[ PF ZF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555529 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x1	1
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555529	0x555555555529 <phase_2+53>
+eflags         0x246	[ PF ZF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555552d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555552d	0x55555555552d <phase_2+57>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555531 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555531	0x555555555531 <phase_2+61>
+eflags         0x297	[ CF PF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555533 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555533	0x555555555533 <phase_2+63>
+eflags         0x297	[ CF PF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555535 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x2	2
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555535	0x555555555535 <phase_2+65>
+eflags         0x297	[ CF PF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555539 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555539	0x555555555539 <phase_2+69>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555553d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555553d	0x55555555553d <phase_2+73>
+eflags         0x246	[ PF ZF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555529 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x2	2
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555529	0x555555555529 <phase_2+53>
+eflags         0x246	[ PF ZF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555552d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555552d	0x55555555552d <phase_2+57>
+eflags         0x206	[ PF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555531 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555531	0x555555555531 <phase_2+61>
+eflags         0x293	[ CF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555533 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x4	4
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555533	0x555555555533 <phase_2+63>
+eflags         0x293	[ CF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555535 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x3	3
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555535	0x555555555535 <phase_2+65>
+eflags         0x293	[ CF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555539 in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x7	7
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x555555555539	0x555555555539 <phase_2+69>
+eflags         0x202	[ IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x000055555555553d in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x7	7
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555553d	0x55555555553d <phase_2+73>
+eflags         0x297	[ CF PF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+
+Breakpoint 3, 0x000055555555553f in phase_2 ()
+Dump of assembler code for function phase_2:
+End of assembler dump.
+rax            0x7	7
+rbx            0x3	3
+rcx            0x0	0
+rdx            0x7fffffffe964	140737488349540
+rsi            0x0	0
+rdi            0x7fffffffe2c0	140737488347840
+rbp            0x7fffffffe950	0x7fffffffe950
+rsp            0x7fffffffe950	0x7fffffffe950
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82cc0	140737349430464
+r11            0x5555555570d2	93824992243922
+r12            0x555555555270	93824992236144
+r13            0x7fffffffea70	140737488349808
+r14            0x0	0
+r15            0x0	0
+rip            0x55555555553f	0x55555555553f <phase_2+75>
+eflags         0x297	[ CF PF AF SF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+0x0000555555555d79 in explode_bomb ()
