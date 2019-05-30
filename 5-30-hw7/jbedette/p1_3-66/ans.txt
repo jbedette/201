@@ -1,0 +1,2 @@
+NR(n) is 3n
+NC(n) is 4n+1
