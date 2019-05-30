@@ -1,0 +1,1 @@
+The symbol main is shared, but because the char main is never initialized the strongly defined global main function takes precendent. If char main was initialized, you would indeed run into prolems.
